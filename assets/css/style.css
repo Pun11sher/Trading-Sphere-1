@@ -652,7 +652,9 @@ section.features{
   height: 600px;
 }
 .events .box:hover{
-  transform: scale(1.1);
+  /* transform: scale(1); */
+  border: 5px solid #0c6ba1;
+  border-radius: 5%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(226, 7, 7, 0.06);
 }
 .events h3 {
@@ -938,59 +940,14 @@ section.features{
 --------------------------------------------------------------*/
 #footer {
   background: #fff;
-  padding: 0 0 30px 0;
   color: #47536e;
   font-size: 14px;
   background: #eff2f8;
+ 
 }
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: #eff2f8;
-  text-align: center;
-  font-size: 15px;
-}
-#footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
-  color: #47536e;
-}
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-#footer .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-#footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background:#0c6ba1;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #415f9d;
-}
+
 #footer .footer-top {
-  padding: 20px 0 10px 0;
+  padding: 20px 0 20px 0;
   background: #fff;
 }
 #footer .footer-top .footer-contact {
