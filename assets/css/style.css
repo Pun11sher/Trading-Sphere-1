@@ -991,7 +991,7 @@ section.features{
 }
 #footer .footer-top .footer-links ul li {
   padding: 10px 80px  0;
-  display: inline;
+  /* display: inline; */
   align-items: center;
 }
 #footer .footer-top .footer-links ul li:first-child {
@@ -1010,6 +1010,8 @@ section.features{
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
+  /* display: flex; */
+  /* flex-direction: column-reverse; */
   background:#0c6ba1;
   color: #fff;
   line-height: 1;
@@ -1043,4 +1045,15 @@ section.features{
     text-align: center;
     padding: 5px 0;
   }
+}
+
+.alert{
+  width: 100%;
+  background-color: #18d26e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: lighter;
+  display: none;
 }

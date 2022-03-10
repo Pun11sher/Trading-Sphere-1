@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Team</title>
+  <title>School Ambassador </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,12 +26,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
+  
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -39,97 +38,70 @@
         <h1><a href="index.html">Trading Sphere</a></h1>
       </div>
 
+
     </div>
   </header>
-  <!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs Section ======= -->
-    <!-- <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
-          </ol>
-        </div>
-
-      </div>
-    </section>End Breadcrumbs Section -->
-
-
-
-    <section class="py-6 bg-light">
-        <div class="container " data-aos="fade-up">
-            <div class="section-title">
-                <h2>Our Team</h2>
-            </div>
-            <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5 mb-5 mb-xl-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/guneet.png" alt="..." />
-                        <h5 class="fw-bolder">Guneet Singh Oberai</h5>
-                      
-                    </div>
+   <section id="contact" class="contact">
+    <div class="section-title">
+        <h2>School Ambassador Registration Form</h2>
+    </div>
+        <div class="container" data-aos="fade-up" style="display: flex; justify-content: center;">
+              <div class="col-lg-6">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
+                <div class="form-group">
+                  <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
                 </div>
-                <div class="col mb-5 mb-5 mb-xl-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/Mayank.png" alt="..." />
-                        <h5 class="fw-bolder">Mayank Gupta</h5>
-                       
-                    </div>
-                </div>
-                <div class="col mb-5 mb-5 mb-xl-0">
-                  <div class="text-center">
-                      <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/Harsh.png" alt="..." />
-                      <h5 class="fw-bolder">Harsh Agarwal</h5>
-             
+                <div class="form-group mt-3">
+                    <select class="form-select" required>
+                        <option value=""  disabled selected >In Which Class You are Studying</option>
+                        <option value="class11">XI</option>
+                        <option value="class12">XII</option>
+                      </select>
                   </div>
-               </div>
-               <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                    <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/Satyam.png" alt="..." />
-                    <h5 class="fw-bolder">Satyam Kumar</h5>
-                  
+                <div class="form-group mt-3">
+                  <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" required>
                 </div>
-               </div>
-              <div class="col mb-5 mb-5 mb-xl-0">
-                <div class="text-center">
-                  <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/Sudip.png" alt="..." />
-                  <h5 class="fw-bolder">Sudip</h5>
-               
+                <div class="form-group mt-3">
+                    <input placeholder="Phone" type="text" class="form-control" name="phone" id="phone" required>
                 </div>
-              </div>
-                <div class="col mb-5 mb-5 mb-sm-0">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/Priyanshu.png" alt="..." />
-                        <h5 class="fw-bolder">Priyanshu</h5>
-                       
-                    </div>
+                <div class="form-group mt-3">
+                    <input placeholder="Enter School Name" type="text" class="form-control" name="school" id="school" required>
                 </div>
-                <div class="col mb-5">
-                    <div class="text-center">
-                        <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/Team/Aastha.png" alt="..." />
-                        <h5 class="fw-bolder">Aastha Sah</h5>
-                    </div>
+                <div class="form-group mt-3">
+                    <input placeholder="Enter School Address" type="text" class="form-control" name="schooladd" id="schooladd" required>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="form-group mt-3">
+                    <input placeholder="Enter School Zip" type="text" class="form-control" name="schoolzip" id="schoolzip" required>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Registration Successful. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Register</button></div>
+              </form>
+              </div> 
+             </div>
+        <!-- </div>  -->
+      </section>
 
-  </main><!-- End #main -->
+    
 
-  <!-- ======= Footer ======= -->
+  </main>
+
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-4 footer-contact">
             <h3>Trading Sphere</h3>
+            <p>
+              <strong>Phone:</strong> +91 xxx 55xxx 55<br>
+              <strong>Email:</strong> info@tradecrafts.com<br>
+            </p>
           </div>
 
           <div class="col-lg-6 col-md-6 footer-links">
@@ -138,6 +110,8 @@
               <li><i class="bx"></i> <a href="privacy.html">Privacy Policy</a></li>
             </ul>
           </div>
+
+
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
@@ -153,7 +127,7 @@
       </div>
     </div>
 
-    <div class="container py-4">
+    <div class="container py-4 ">
       <div class="copyright">
         &copy; Copyright <strong><span>Trading Sphere</span></strong> <span>2022</span>. All Rights Reserved
       </div>
@@ -163,7 +137,6 @@
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
