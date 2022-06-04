@@ -12,6 +12,15 @@
   <!-- Favicons -->
   <link href="assets/img/android-chrome-192x192.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z3FT1E8LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8Z3FT1E8LY');
+</script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -50,15 +59,16 @@
     </div>
         <div class="container" data-aos="fade-up" style="display: flex; justify-content: center;">
               <div class="col-lg-6">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
+              <form method="post" name="google-sheet" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
+                <div class="alert">Registration Successful, Thank You !!</div>
                 <div class="form-group">
                   <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group mt-3">
-                    <select class="form-select" required>
-                        <option value=""  disabled selected >In Which Class You are Studying</option>
-                        <option value="class11">XI</option>
-                        <option value="class12">XII</option>
+                    <select class="form-select" name="class" required>
+                        <option value="" disabled selected >In Which Class You are Studying</option>
+                        <option value="11">XI</option>
+                        <option value="12">XII</option>
                       </select>
                   </div>
                 <div class="form-group mt-3">
@@ -75,11 +85,6 @@
                 </div>
                 <div class="form-group mt-3">
                     <input placeholder="Enter School Zip" type="text" class="form-control" name="schoolzip" id="schoolzip" required>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Registration Successful. Thank you!</div>
                 </div>
                 <div class="text-center"><button type="submit">Register</button></div>
               </form>
@@ -99,7 +104,7 @@
           <div class="col-lg-3 col-md-4 footer-contact">
             <h3>Trading Sphere</h3>
             <p>
-              <strong>Phone:</strong> +91 xxx 55xxx 55<br>
+              <strong>Phone:</strong> +91 635 01292 43<br>
               <strong>Email:</strong> info@tradecrafts.com<br>
             </p>
           </div>
@@ -116,10 +121,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100068958855364" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/trading.sphere/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/trading-sphere" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -147,7 +151,20 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby63kolZh9HB31jE6VSkkwhbf2RpxX0iQOnOTg1jCg5uRU28Wivggk3UscAeNYAcsLZ/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.querySelector('.alert').style.display='block')
+        .catch(error => console.error('Error!', error.message))
+      setTimeout(()=>{
+        document.querySelector('.alert').style.display='none';
+      },2000)
+    })
+  </script>
 </body>
 
 </html>

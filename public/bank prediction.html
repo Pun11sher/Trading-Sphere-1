@@ -5,13 +5,22 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Register</title>
+  <title>Predict Bank Nifty</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/android-chrome-192x192.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z3FT1E8LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8Z3FT1E8LY');
+</script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -41,40 +50,42 @@
 
     </div>
   </header>
-
   <main id="main">
 
    <section id="contact" class="contact">
     <div class="section-title">
-        <h2>Create Event In Your College</h2>
-    </div>
-    <div class="container" data-aos="fade-up" style="display: flex; justify-content: center;">
+        <h2>Predict Bank Nifty For Tomorrow </h2>
+        </div>
+        <div class="container" data-aos="fade-up" style="display: flex; justify-content: center;">
               <div class="col-lg-6">
-              <form id="eventcreate" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
-                <div class="alert">Done</div>
+              <form method="post" name="google-sheet" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
+                <div class="alert">Your Response was Successfully Submitted, Thank You !!</div>
                 <div class="form-group">
-                  <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
+                  <input  placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group mt-3">
                   <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" required>
                 </div>
                 <div class="form-group mt-3">
-                    <input placeholder="Phone" type="text" class="form-control" name="phone" id="phone" required>
+                    <input placeholder="Phone" type="number" class="form-control" name="phone" id="phone" required>
                 </div>
                 <div class="form-group mt-3">
-                    <input placeholder="Enter Institute Name" type="text" class="form-control" name="institute" id="institute" required>
+                    <input style="background-color: #AAF178; font-weight: 900 ;" placeholder="Bank Nifty Current Level : 35487" type="number" class="form-control" name="closeprice" id="closeprice" required disabled>
                 </div>
                 <div class="form-group mt-3">
-                    <input placeholder="Enter Institute Address" type="text" class="form-control" name="instituteadd" id="instituteadd" required>
+                    <select class="form-select" name ="predict" id="predict" required>
+                        <option  value="" disabled selected>Choose Tommorow Opening</option>
+                        <option value ="gapup">Gap Up</option>
+                        <option value="gapdown">Gap Down</option>
+                      </select>
                 </div>
-                <div class="form-group mt-3">
-                    <input placeholder="Enter Institute Zip" type="text" class="form-control" name="institutezip" id="institutezip" required>
+                  <div class="form-group mt-3">
+                    <input placeholder="Enter the Tomorrow Opening of Bank Nifty" type="number" class="form-control" name="openprice" id="openprice" required>
                 </div>
-                <div class="text-center"><button type="submit">Register</button></div>
-              </form>
+                <div class="text-center"><button type="submit" disabled>Contest Ended</button></div>
+            </form>
               </div> 
-    </div>
-        <!-- </div>  -->
+             </div>
       </section>
 
     
@@ -88,7 +99,7 @@
           <div class="col-lg-3 col-md-4 footer-contact">
             <h3>Trading Sphere</h3>
             <p>
-              <strong>Phone:</strong> +91 xxx 55xxx 55<br>
+              <strong>Phone:</strong> +91 635 01292 43<br>
               <strong>Email:</strong> info@tradecrafts.com<br>
             </p>
           </div>
@@ -105,9 +116,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <div class="social-links mt-3">
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100068958855364" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/trading.sphere/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/trading-sphere" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -136,7 +147,22 @@
   <!-- Template Main JS File -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="createevent.js"></script>
+  <script src="register.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLL8yxdthx8KgMzjr2vrXP2SF_KMu5QLkwAFPNfdYJRvdj3gyyBQnxBETKJAyxVKc4yw/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.querySelector('.alert').style.display='block')
+        .catch(error => console.error('Error!', error.message))
+      setTimeout(()=>{
+        document.querySelector('.alert').style.display='none';
+      },2000)
+    })
+  </script>
+  
 
 </body>
 

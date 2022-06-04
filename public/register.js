@@ -20,11 +20,11 @@ function submitForm(e){
     var name=getInputVal('name');
     var email=getInputVal('email');
     var phone=getInputVal('phone');
-    var domainselect=getInputVal('domainselect');
     var domain=getInputVal('domain');
+    var year=getInputVal('year');
     var location=getInputVal('location');
 
-    saveMessage(name,email,phone,domainselect,domain,location);
+    saveMessage(name,email,phone,domain,year,location);
     document.querySelector('.alert').style.display='block';
     setTimeout(()=>{
         document.querySelector('.alert').style.display='none';
@@ -37,14 +37,14 @@ function getInputVal(id){
     return document.getElementById(id).value;
 }
 
-function saveMessage(name,email,phone,domainselect,domain,location){
+function saveMessage(name,email,phone,domain,year,location){
     var newMessageRef=eventRegisterRef.push();
     newMessageRef.set({
         name: name,
         email:email,
         phone:phone,
-        domainselect:domainselect,
         domain:domain,
+        year:year,
         location:location
     })
 }

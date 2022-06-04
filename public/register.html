@@ -12,6 +12,15 @@
   <!-- Favicons -->
   <link href="assets/img/android-chrome-192x192.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z3FT1E8LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8Z3FT1E8LY');
+</script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -50,7 +59,7 @@
         </div>
         <div class="container" data-aos="fade-up" style="display: flex; justify-content: center;">
               <div class="col-lg-6">
-              <form id="registerForm"  class="php-email-form" role="form" data-aos="fade-up" style="width: 100%;">
+              <form method="post" name="google-sheet" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
                 <div class="alert">Registration Successful, Thank You !!</div>
                 <div class="form-group">
                   <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
@@ -59,36 +68,37 @@
                   <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" required>
                 </div>
                 <div class="form-group mt-3">
-                    <input placeholder="Phone" type="text" class="form-control" name="phone" id="phone" required>
+                    <input placeholder="Phone" type="number" class="form-control" name="phone" id="phone" required>
                 </div>
                 <div class="form-group mt-3">
-                    <select class="form-select" id="domainselect" required>
+                    <select class="form-select" name ="domain" id="domain" required>
                         <option  value="" disabled selected>Choose Domain</option>
-                        <option value="school">School</option>
-                        <option value="college">College</option>
+                        <option value ="college">College</option>
                         <option value="other">Other</option>
                       </select>
                   </div>
                 <div class="form-group mt-3">
-                    <input placeholder="Enter Domain Name" type="text" class="form-control" name="domain" id="domain" required>
+                  <select class="form-select"  name ="year" id="year" required>
+                    <option value=""  disabled selected >Choose Year</option>
+                    <option value="1st Year">First Year</option>
+                    <option value="2nd Year" >Second Year</option>
+                    <option value="3rd Year" >Third Year</option>
+                    <option value="4th Year">Final Year</option>
+                  </select>
                 </div>
                   <div class="form-group mt-3">
-                    <select class="form-select"  id="location" required>
+                    <select class="form-select"  name="location" id="location" required>
                         <option value=""  disabled selected >Choose Workshop</option>
-                        <option value="Location 1">Location 1</option>
-                        <option value="Location 2">Location 2</option>
-                        <option value="Location 3">Location 3</option>
+                        <option value="IIIT DHARWAD" disabled >IIIT DHARWAD</option>
+                        <option value="PATNA" disabled>PATNA</option>
+                        <option value="MMMUT Gorakhpur" selected>MMMUT Gorakhpur</option>
                       </select>
                   </div>
-                <div class="text-center"><button type="submit">Register</button></div>
+                <div class="text-center"><button type="submit" >Register</button></div>
               </form>
               </div> 
              </div>
-        <!-- </div>  -->
-      </section>
-
-    
-
+            </section>
   </main>
 
   <footer id="footer">
@@ -98,7 +108,7 @@
           <div class="col-lg-3 col-md-4 footer-contact">
             <h3>Trading Sphere</h3>
             <p>
-              <strong>Phone:</strong> +91 xxx 55xxx 55<br>
+              <strong>Phone:</strong> +91 635 01292 43<br>
               <strong>Email:</strong> info@tradecrafts.com<br>
             </p>
           </div>
@@ -115,9 +125,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <div class="social-links mt-3">
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100068958855364" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/trading.sphere/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/trading-sphere" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -147,6 +157,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="register.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbybTU1j5JCk5ZKOJlXXLhFc1zNjjWeKctwG9vXtaj7nY7N1Kgm2uhedgEoFce0MGkjO/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.querySelector('.alert').style.display='block')
+        .catch(error => console.error('Error!', error.message))
+      setTimeout(()=>{
+        document.querySelector('.alert').style.display='none';
+      },2000)
+    })
+  </script>
   
 
 </body>
