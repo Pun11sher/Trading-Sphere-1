@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Predict Bank Nifty</title>
+  <title>Sector Prediction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,58 +38,85 @@
 </head>
 
 <body>
-
-  
+    
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
         <h1><a href="index.html">Trading Sphere</a></h1>
       </div>
-
-
     </div>
   </header>
-  <main id="main">
 
+  <main id="main">
    <section id="contact" class="contact">
     <div class="section-title">
-        <h2>Predict Bank Nifty For Tomorrow </h2>
+        <h2 style="font-weight: 200;">Sector Prediction</h2>
+        <h3 style="font-weight: 100;">Choose Top 3 Sectors For 25th November 2022</h3>
         </div>
-        <div class="container" data-aos="fade-up" style="display: flex; justify-content: center;">
-              <div class="col-lg-6">
+        <div class="container" data-aos="fade-up" style="display: flex; justify-content: center; width: 100%;">
+              <div class="col-lg-6" style="width:50%; float: left;">
               <form method="post" name="google-sheet" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
-                <div class="alert">Your Response was Successfully Submitted, Thank You !!</div>
-                <div class="form-group">
-                  <input  placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
+                <div class="alert">Thank You, Your Response has been recorded!!</div>
+                <div class="form-group mt-3">
+                  <label for="name" style="color: black; font-weight: 100;margin-bottom: 10px;">Name:</label> <br>
+                  <input class="form-control" required type="text" id="name" name="name" placeholder="Enter Full Name"><br>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="phone" style="color: black; font-weight: 100;margin-bottom: 10px;">Phone: </label> <br>
+                  <input class="form-control" required type="text" id="phone" name="phone" placeholder="Enter Phone Number"><br>
                 </div>
                 <div class="form-group mt-3">
-                  <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" required>
-                </div>
-                <div class="form-group mt-3">
-                    <input placeholder="Phone" type="number" class="form-control" name="phone" id="phone" required>
-                </div>
-                <div class="form-group mt-3">
-                    <input style="background-color: #AAF178; font-weight: 900 ;" placeholder="Bank Nifty Current Level : 35487" type="number" class="form-control" name="closeprice" id="closeprice" required disabled>
-                </div>
-                <div class="form-group mt-3">
-                    <select class="form-select" name ="predict" id="predict" required>
-                        <option  value="" disabled selected>Choose Tommorow Opening</option>
-                        <option value ="gapup">Gap Up</option>
-                        <option value="gapdown">Gap Down</option>
+                  <label for="gainer" style="color: black; font-weight: 100; margin-bottom: 10px;"> Top Gainers (Multiplier : 8 pts) </label> <br>
+                    <select class="form-select" name ="point1" id="point1" required> 
+                        <option  value="" disabled selected>Select Highest Gainer Sector</option>
+                        <option value ="bank">Bank Nifty</option>
+                        <option value="it">Nifty IT </option>
+                        <option value="auto"> Nifty Auto </option>
+                        <option value="realty"> Nifty Realty </option>
+                        <option value="metal"> Nifty Metal</option>
+                        <option value="fmcg"> Nifty FMCG</option>
+                        <option value="pharma"> Nifty Pharma</option>
                       </select>
-                </div>
+                  </div>
+
                   <div class="form-group mt-3">
-                    <input placeholder="Enter the Tomorrow Opening of Bank Nifty" type="number" class="form-control" name="openprice" id="openprice" required>
-                </div>
-                <div class="text-center"><button type="submit" disabled>Contest Ended</button></div>
-            </form>
+                    <label for="gainer2" style="color: black; font-weight: 100; margin-bottom: 10px; "> Second Highest Gainers (Multiplier : 6 pts) </label> <br>
+                      <select class="form-select" name ="point2" id="point2" required>
+                          <option  value="" disabled selected>Select Second Highest Gainer Sector</option>
+                          <option value ="bank">Bank Nifty</option>
+                          <option value="it">Nifty IT </option>
+                          <option value="auto"> Nifty Auto </option>
+                          <option value="realty"> Nifty Realty </option>
+                          <option value="metal"> Nifty Metal</option>
+                          <option value="fmcg"> Nifty FMCG</option>
+                          <option value="pharma"> Nifty Pharma</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-3">
+                      <label for="gainer3" style="color: black; font-weight: 100; margin-bottom: 10px;"> Third Highest Gainers (Multiplier : 4 pts) </label> <br>
+                        <select class="form-select" name ="point3" id="point3" required>
+                            <option  value="" disabled selected>Select Third Highest Gainer Sector</option>
+                            <option value ="bank">Bank Nifty</option>
+                            <option value="it">Nifty IT </option>
+                            <option value="auto"> Nifty Auto </option>
+                            <option value="realty"> Nifty Realty </option>
+                            <option value="metal"> Nifty Metal</option>
+                            <option value="fmcg"> Nifty FMCG</option>
+                            <option value="pharma"> Nifty Pharma</option>
+                          </select>
+                      </div>
+                  
+                <div class="text-center"><button type="submit" >Submit</button></div>
+              </form>
               </div> 
+              <!-- <div class="col-lg-6" style="width: 50%; float: right;">
+                <img style="width:100%;" src="assets/img/Leaderboard.jpg" alt="" />
+              </div> -->
              </div>
-      </section>
-
-    
-
+            </section>
   </main>
 
   <footer id="footer">
@@ -110,8 +137,6 @@
               <li><i class="bx"></i> <a href="privacy.html">Privacy Policy</a></li>
             </ul>
           </div>
-
-
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
@@ -149,7 +174,7 @@
   <script src="assets/js/main.js"></script>
   <script src="register.js"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLL8yxdthx8KgMzjr2vrXP2SF_KMu5QLkwAFPNfdYJRvdj3gyyBQnxBETKJAyxVKc4yw/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyBTpkWKsefSGXcRV2z0Yod2tn99gHuVKsI2D38sOJ1XD_yu-5YR6MZcoB7mu6Eo2sHcA/exec'
     const form = document.forms['google-sheet']
   
     form.addEventListener('submit', e => {
@@ -162,8 +187,6 @@
       },2000)
     })
   </script>
-  
 
 </body>
-
 </html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stocks Prediction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/android-chrome-192x192.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z3FT1E8LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8Z3FT1E8LY');
+</script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Trading Sphere</a></h1>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+   <section id="contact" class="contact">
+    <div class="section-title">
+        <h2 style="font-weight: 200;">Stocks Prediction</h2>
+        <h3 style="font-weight: 100;">Choose Top 5 Stocks From Nifty 50 For 30th November 2022</h3>
+        </div>
+        <div class="container" data-aos="fade-up" style="display: flex; justify-content: center; width: 100%;">
+              <div class="col-lg-6" style="width:50%; float: left; ">
+              <form method="post" name="google-sheet" role="form" class="php-email-form" data-aos="fade-up" style="width: 100%;">
+                <div class="alert">Thank You, Your Response has been recorded!!</div>
+                <div class="form-group mt-3">
+                  <label for="name" style="color: black; font-weight: 100;">Name:</label> <br>
+                  <input class="form-control" required type="text" id="name" name="name" placeholder="Enter Full Name"><br>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="phone" style="color: black; font-weight: 100;">Phone: </label> <br>
+                  <input class="form-control" required type="text" id="phone" name="phone" placeholder="Enter Phone Number"><br>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="gainer" style="color: black; font-weight: 100;margin-bottom: 10px;"> Top Gainers (Multiplier : 10 pts) </label> <br>
+                    <select class="form-select" name ="point1" id="point1" required style="color: black;font-weight: 100;"> 
+                        <option  value="" disabled selected>Select Highest Gainer Stocks </option>
+                        <option value ="ADANIENT">ADANIENT</option> 
+                        <option value="ADANIPORTS">ADANIPORTS</option>
+                        <option value="APOLLOHOSP"> APOLLOHOSP</option>
+                        <option value="ASIANPAINT">ASIANPAINT </option>
+                        <option value="AXISBANK">AXISBANK </option>
+                        <option value="BAJAJ-AUTO ">BAJAJ-AUTO </option>
+                        <option value="BAJAJFINSV">BAJAJFINSV </option>
+                        <option value ="BAJFINANCE">BAJFINANCE </option>
+                        <option value="BHARTIARTL"> BHARTIARTL</option>
+                        <option value="BPCL"> BPCL </option>
+                        <option value="BRITANNIA"> BRITANNIA </option>
+                        <option value="CIPLA"> CIPLA</option>
+                        <option value="COALINDIA"> COALINDIA</option>
+                        <option value="DIVISLAB">DIVISLAB </option>
+                        <option value ="DRREDDY">DRREDDY</option>
+                        <option value="EICHERMOT"> EICHERMOT</option>
+                        <option value="GRASIM"> GRASIM</option>
+                        <option value="HCLTECH "> HCLTECH </option>
+                        <option value="HDFC">HDFC </option>
+                        <option value="HDFCBANK"> HDFCBANK</option>
+                        <option value="HDFCLIFE"> HDFCLIFE</option>
+                        <option value ="HEROMOTOCO">HEROMOTOCO</option>
+                        <option value="HINDALCO"> HINDALCO</option>
+                        <option value="HINDUNILVR "> HINDUNILVR </option>
+                        <option value="ICICIBANK"> ICICIBANK </option>
+                        <option value="INDUSINDBK"> INDUSINDBK</option>
+                        <option value="INFY">INFY </option>
+                        <option value="ITC">ITC </option>
+                        <option value ="JSWSTEEL">JSWSTEEL</option>
+                        <option value="KOTAKBANK">KOTAKBANK </option>
+                        <option value="LT"> LT </option>
+                        <option value="M&M"> M&M </option>
+                        <option value="MARUTI"> MARUTI</option>
+                        <option value="NESTLEIND">NESTLEIND </option>
+                        <option value="NTPC"> NTPC</option>
+                        <option value ="ONGC">ONGC</option>
+                        <option value="POWERGRID">POWERGRID</option>
+                        <option value="RELIANCE"> RELIANCE</option>
+                        <option value="SBILIFE"> SBILIFE </option>
+                        <option value="SBIN"> SBIN</option>
+                        <option value="SUNPHARMA"> SUNPHARMA</option>
+                        <option value="TATACONSUM"> TATACONSUM</option>
+                        <option value ="TATAMOTORS">TATAMOTORS</option>
+                        <option value="TATASTEEL">TATASTEEL</option>
+                        <option value="TCS"> TCS</option>
+                        <option value="TECHM "> TECHM </option>
+                        <option value="TITAN"> TITAN</option>
+                        <option value="ULTRACEMCO"> ULTRACEMCO</option>
+                        <option value="UPL"> UPL</option>
+                        <option value ="WIPRO">WIPRO</option>
+
+                      </select>
+                  </div>
+
+                  <div class="form-group mt-3">
+                    <label for="gainer" style="color: black; font-weight: 100; margin-bottom: 10px;"> Second Highest Gainers (Multiplier : 8 pts) </label> <br>
+                      <select class="form-select" style="color: black; font-weight: 100;" name ="point2" id="point2" required> 
+                          <option  value="" disabled selected>Select Highest Gainer Stocks </option>
+                          <option value ="ADANIENT">ADANIENT</option> 
+                          <option value="ADANIPORTS">ADANIPORTS</option>
+                          <option value="APOLLOHOSP"> APOLLOHOSP</option>
+                          <option value="ASIANPAINT">ASIANPAINT </option>
+                          <option value="AXISBANK">AXISBANK </option>
+                          <option value="BAJAJ-AUTO ">BAJAJ-AUTO </option>
+                          <option value="BAJAJFINSV">BAJAJFINSV </option>
+                          <option value ="BAJFINANCE">BAJFINANCE </option>
+                          <option value="BHARTIARTL"> BHARTIARTL</option>
+                          <option value="BPCL"> BPCL </option>
+                          <option value="BRITANNIA"> BRITANNIA </option>
+                          <option value="CIPLA"> CIPLA</option>
+                          <option value="COALINDIA"> COALINDIA</option>
+                          <option value="DIVISLAB">DIVISLAB </option>
+                          <option value ="DRREDDY">DRREDDY</option>
+                          <option value="EICHERMOT"> EICHERMOT</option>
+                          <option value="GRASIM"> GRASIM</option>
+                          <option value="HCLTECH "> HCLTECH </option>
+                          <option value="HDFC">HDFC </option>
+                          <option value="HDFCBANK"> HDFCBANK</option>
+                          <option value="HDFCLIFE"> HDFCLIFE</option>
+                          <option value ="HEROMOTOCO">HEROMOTOCO</option>
+                          <option value="HINDALCO"> HINDALCO</option>
+                          <option value="HINDUNILVR "> HINDUNILVR </option>
+                          <option value="ICICIBANK"> ICICIBANK </option>
+                          <option value="INDUSINDBK"> INDUSINDBK</option>
+                          <option value="INFY">INFY </option>
+                          <option value="ITC">ITC </option>
+                          <option value ="JSWSTEEL">JSWSTEEL</option>
+                          <option value="KOTAKBANK">KOTAKBANK </option>
+                          <option value="LT"> LT </option>
+                          <option value="M&M"> M&M </option>
+                          <option value="MARUTI"> MARUTI</option>
+                          <option value="NESTLEIND">NESTLEIND </option>
+                          <option value="NTPC"> NTPC</option>
+                          <option value ="ONGC">ONGC</option>
+                          <option value="POWERGRID">POWERGRID</option>
+                          <option value="RELIANCE"> RELIANCE</option>
+                          <option value="SBILIFE"> SBILIFE </option>
+                          <option value="SBIN"> SBIN</option>
+                          <option value="SUNPHARMA"> SUNPHARMA</option>
+                          <option value="TATACONSUM"> TATACONSUM</option>
+                          <option value ="TATAMOTORS">TATAMOTORS</option>
+                          <option value="TATASTEEL">TATASTEEL</option>
+                          <option value="TCS"> TCS</option>
+                          <option value="TECHM "> TECHM </option>
+                          <option value="TITAN"> TITAN</option>
+                          <option value="ULTRACEMCO"> ULTRACEMCO</option>
+                          <option value="UPL"> UPL</option>
+                          <option value ="WIPRO">WIPRO</option>
+  
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="gainer" style="color: black; font-weight: 100; margin-bottom: 10px;"> Third Highest Gainers (Multiplier : 6 pts) </label> <br>
+                          <select class="form-select" style="color: black; font-weight: 100;" name ="point3" id="point3" required> 
+                              <option  value="" disabled selected>Select Highest Gainer Stocks </option>
+                              <option value ="ADANIENT">ADANIENT</option> 
+                        <option value="ADANIPORTS">ADANIPORTS</option>
+                        <option value="APOLLOHOSP"> APOLLOHOSP</option>
+                        <option value="ASIANPAINT">ASIANPAINT </option>
+                        <option value="AXISBANK">AXISBANK </option>
+                        <option value="BAJAJ-AUTO ">BAJAJ-AUTO </option>
+                        <option value="BAJAJFINSV">BAJAJFINSV </option>
+                        <option value ="BAJFINANCE">BAJFINANCE </option>
+                        <option value="BHARTIARTL"> BHARTIARTL</option>
+                        <option value="BPCL"> BPCL </option>
+                        <option value="BRITANNIA"> BRITANNIA </option>
+                        <option value="CIPLA"> CIPLA</option>
+                        <option value="COALINDIA"> COALINDIA</option>
+                        <option value="DIVISLAB">DIVISLAB </option>
+                        <option value ="DRREDDY">DRREDDY</option>
+                        <option value="EICHERMOT"> EICHERMOT</option>
+                        <option value="GRASIM"> GRASIM</option>
+                        <option value="HCLTECH "> HCLTECH </option>
+                        <option value="HDFC">HDFC </option>
+                        <option value="HDFCBANK"> HDFCBANK</option>
+                        <option value="HDFCLIFE"> HDFCLIFE</option>
+                        <option value ="HEROMOTOCO">HEROMOTOCO</option>
+                        <option value="HINDALCO"> HINDALCO</option>
+                        <option value="HINDUNILVR "> HINDUNILVR </option>
+                        <option value="ICICIBANK"> ICICIBANK </option>
+                        <option value="INDUSINDBK"> INDUSINDBK</option>
+                        <option value="INFY">INFY </option>
+                        <option value="ITC">ITC </option>
+                        <option value ="JSWSTEEL">JSWSTEEL</option>
+                        <option value="KOTAKBANK">KOTAKBANK </option>
+                        <option value="LT"> LT </option>
+                        <option value="M&M"> M&M </option>
+                        <option value="MARUTI"> MARUTI</option>
+                        <option value="NESTLEIND">NESTLEIND </option>
+                        <option value="NTPC"> NTPC</option>
+                        <option value ="ONGC">ONGC</option>
+                        <option value="POWERGRID">POWERGRID</option>
+                        <option value="RELIANCE"> RELIANCE</option>
+                        <option value="SBILIFE"> SBILIFE </option>
+                        <option value="SBIN"> SBIN</option>
+                        <option value="SUNPHARMA"> SUNPHARMA</option>
+                        <option value="TATACONSUM"> TATACONSUM</option>
+                        <option value ="TATAMOTORS">TATAMOTORS</option>
+                        <option value="TATASTEEL">TATASTEEL</option>
+                        <option value="TCS"> TCS</option>
+                        <option value="TECHM "> TECHM </option>
+                        <option value="TITAN"> TITAN</option>
+                        <option value="ULTRACEMCO"> ULTRACEMCO</option>
+                        <option value="UPL"> UPL</option>
+                        <option value ="WIPRO">WIPRO</option>
+      
+                            </select>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="gainer" style="color: black; font-weight: 100; margin-bottom: 10px;"> Fourth Highest Gainers (Multiplier : 4 pts) </label> <br>
+                              <select class="form-select" style="color: black; font-weight: 100;" name ="point4" id="point4" required> 
+                                  <option  value="" disabled selected>Select Highest Gainer Stocks </option>
+                                  <option value ="ADANIENT">ADANIENT</option> 
+                        <option value="ADANIPORTS">ADANIPORTS</option>
+                        <option value="APOLLOHOSP"> APOLLOHOSP</option>
+                        <option value="ASIANPAINT">ASIANPAINT </option>
+                        <option value="AXISBANK">AXISBANK </option>
+                        <option value="BAJAJ-AUTO ">BAJAJ-AUTO </option>
+                        <option value="BAJAJFINSV">BAJAJFINSV </option>
+                        <option value ="BAJFINANCE">BAJFINANCE </option>
+                        <option value="BHARTIARTL"> BHARTIARTL</option>
+                        <option value="BPCL"> BPCL </option>
+                        <option value="BRITANNIA"> BRITANNIA </option>
+                        <option value="CIPLA"> CIPLA</option>
+                        <option value="COALINDIA"> COALINDIA</option>
+                        <option value="DIVISLAB">DIVISLAB </option>
+                        <option value ="DRREDDY">DRREDDY</option>
+                        <option value="EICHERMOT"> EICHERMOT</option>
+                        <option value="GRASIM"> GRASIM</option>
+                        <option value="HCLTECH "> HCLTECH </option>
+                        <option value="HDFC">HDFC </option>
+                        <option value="HDFCBANK"> HDFCBANK</option>
+                        <option value="HDFCLIFE"> HDFCLIFE</option>
+                        <option value ="HEROMOTOCO">HEROMOTOCO</option>
+                        <option value="HINDALCO"> HINDALCO</option>
+                        <option value="HINDUNILVR "> HINDUNILVR </option>
+                        <option value="ICICIBANK"> ICICIBANK </option>
+                        <option value="INDUSINDBK"> INDUSINDBK</option>
+                        <option value="INFY">INFY </option>
+                        <option value="ITC">ITC </option>
+                        <option value ="JSWSTEEL">JSWSTEEL</option>
+                        <option value="KOTAKBANK">KOTAKBANK </option>
+                        <option value="LT"> LT </option>
+                        <option value="M&M"> M&M </option>
+                        <option value="MARUTI"> MARUTI</option>
+                        <option value="NESTLEIND">NESTLEIND </option>
+                        <option value="NTPC"> NTPC</option>
+                        <option value ="ONGC">ONGC</option>
+                        <option value="POWERGRID">POWERGRID</option>
+                        <option value="RELIANCE"> RELIANCE</option>
+                        <option value="SBILIFE"> SBILIFE </option>
+                        <option value="SBIN"> SBIN</option>
+                        <option value="SUNPHARMA"> SUNPHARMA</option>
+                        <option value="TATACONSUM"> TATACONSUM</option>
+                        <option value ="TATAMOTORS">TATAMOTORS</option>
+                        <option value="TATASTEEL">TATASTEEL</option>
+                        <option value="TCS"> TCS</option>
+                        <option value="TECHM "> TECHM </option>
+                        <option value="TITAN"> TITAN</option>
+                        <option value="ULTRACEMCO"> ULTRACEMCO</option>
+                        <option value="UPL"> UPL</option>
+                        <option value ="WIPRO">WIPRO</option>
+          
+                                </select>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="gainer" style="color: black; font-weight: 100; margin-bottom: 10px;"> Fifth Highest Gainers (Multiplier : 2 pts) </label> <br>
+                                  <select class="form-select" style="color: black; font-weight: 100;" name ="point5" id="point5" required> 
+                                      <option  value="" disabled selected>Select Highest Gainer Stocks </option>
+                                      <option value ="ADANIENT">ADANIENT</option> 
+                                      <option value="ADANIPORTS">ADANIPORTS</option>
+                                      <option value="APOLLOHOSP"> APOLLOHOSP</option>
+                                      <option value="ASIANPAINT">ASIANPAINT </option>
+                                      <option value="AXISBANK">AXISBANK </option>
+                                      <option value="BAJAJ-AUTO ">BAJAJ-AUTO </option>
+                                      <option value="BAJAJFINSV">BAJAJFINSV </option>
+                                      <option value ="BAJFINANCE">BAJFINANCE </option>
+                                      <option value="BHARTIARTL"> BHARTIARTL</option>
+                                      <option value="BPCL"> BPCL </option>
+                                      <option value="BRITANNIA"> BRITANNIA </option>
+                                      <option value="CIPLA"> CIPLA</option>
+                                      <option value="COALINDIA"> COALINDIA</option>
+                                      <option value="DIVISLAB">DIVISLAB </option>
+                                      <option value ="DRREDDY">DRREDDY</option>
+                                      <option value="EICHERMOT"> EICHERMOT</option>
+                                      <option value="GRASIM"> GRASIM</option>
+                                      <option value="HCLTECH "> HCLTECH </option>
+                                      <option value="HDFC">HDFC </option>
+                                      <option value="HDFCBANK"> HDFCBANK</option>
+                                      <option value="HDFCLIFE"> HDFCLIFE</option>
+                                      <option value ="HEROMOTOCO">HEROMOTOCO</option>
+                                      <option value="HINDALCO"> HINDALCO</option>
+                                      <option value="HINDUNILVR "> HINDUNILVR </option>
+                                      <option value="ICICIBANK"> ICICIBANK </option>
+                                      <option value="INDUSINDBK"> INDUSINDBK</option>
+                                      <option value="INFY">INFY </option>
+                                      <option value="ITC">ITC </option>
+                                      <option value ="JSWSTEEL">JSWSTEEL</option>
+                                      <option value="KOTAKBANK">KOTAKBANK </option>
+                                      <option value="LT"> LT </option>
+                                      <option value="M&M"> M&M </option>
+                                      <option value="MARUTI"> MARUTI</option>
+                                      <option value="NESTLEIND">NESTLEIND </option>
+                                      <option value="NTPC"> NTPC</option>
+                                      <option value ="ONGC">ONGC</option>
+                                      <option value="POWERGRID">POWERGRID</option>
+                                      <option value="RELIANCE"> RELIANCE</option>
+                                      <option value="SBILIFE"> SBILIFE </option>
+                                      <option value="SBIN"> SBIN</option>
+                                      <option value="SUNPHARMA"> SUNPHARMA</option>
+                                      <option value="TATACONSUM"> TATACONSUM</option>
+                                      <option value ="TATAMOTORS">TATAMOTORS</option>
+                                      <option value="TATASTEEL">TATASTEEL</option>
+                                      <option value="TCS"> TCS</option>
+                                      <option value="TECHM "> TECHM </option>
+                                      <option value="TITAN"> TITAN</option>
+                                      <option value="ULTRACEMCO"> ULTRACEMCO</option>
+                                      <option value="UPL"> UPL</option>
+                                      <option value ="WIPRO">WIPRO</option>
+              
+                                    </select>
+                                </div>
+                  
+                <div class="text-center"><button type="submit" >Submit</button></div>
+              </form>
+              </div> 
+              <!-- <div class="col-lg-6" style="width: 50%; float: right;">
+                <img style="width:100%; height: 100%;" src="assets/img/l2.jpeg" alt="" />
+              </div> -->
+             </div>
+            </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 footer-contact">
+            <h3>Trading Sphere</h3>
+            <p>
+              <strong>Phone:</strong> +91 635 01292 43<br>
+              <strong>Email:</strong> info@tradecrafts.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <ul>
+              <li><i class="bx"></i> <a href="terms.html">Terms of Service</a></li>
+              <li><i class="bx"></i> <a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <div class="social-links mt-3">
+              <a href="https://www.facebook.com/profile.php?id=100068958855364" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/trading.sphere/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/trading-sphere" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4 ">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Trading Sphere</span></strong> <span>2022</span>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by TradeCrafts
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="register.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvyj7Ueja46k4WYpQ7d4DNKGU4bx-q1OGWJ8_epRPFB9Yz9MDS1mwAgT_QSy_M5ytk4A/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.querySelector('.alert').style.display='block')
+        .catch(error => console.error('Error!', error.message))
+      setTimeout(()=>{
+        document.querySelector('.alert').style.display='none';
+      },2000)
+    })
+  </script>
+
+</body>
+</html>
